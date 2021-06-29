@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+
+<body style="background-color: #ebebeb;">
+    <nav class="navbar navbar-dark" style="background-color: #1f1f1f;">
+        <div class="container-fluid">
+            <a class="navbar-brand">Weather App</a>
+            <div class="d-flex">
+                <select class="form-select" name="cityselect" id="cityselect"></select>
+            </div>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="card unitcard">
+            <h1>Unit</h1>
+            <select class="btn btn-outline-dark dropdown-toggle" name="unitselect" id="unitselect">
+                <option value="metric">Celsius </option>
+                <option value="imperial">Fahrenheit </option>
+            </select>
+        </div>
+        <div class="card" style="width: 100%; margin-top: 20px;">
+            <div class="cardmodule spacedcontent">
+                <h4>Current Weather</h4>
+                <p id="time">00:00 AM</p>
+            </div>
+            <div class="cardmodule" style="justify-content: space-between;">
+                <div style="display: flex; justify-content: center; align-items: center; width: 45%;">
+                    <img id="weathericon" src="http://openweathermap.org/img/wn/02d@2x.png" alt="weathericon">
+                    <h2 id="temp" style="margin: 0;">0°c</h2>
+                </div>
+                <div style="width: 45%;">
+                    <h4 id="disc" style="margin: 0;"></h4>
+                    <h4 id="feelsLike" style="margin: 0;">Feels Like : 0°c</h4>
+                </div>
+            </div>
+            <div class="currentdetails cardmodule">
+                <div class="left" style="width: 45%;">
+                    <div class="spacedcontent">
+                        <div>Temp Min</div>
+                        <div>
+                            <h5 id="tempMin">0°c</h5>
+                        </div>
+                    </div>
+                    <hr style="height: 2px;">
+                    <div class="spacedcontent">
+                        <div>Temp Max</div>
+                        <div>
+                            <h5 id="tempMax">0°c</h5>
+                        </div>
+                    </div>
+                    <hr style="height: 2px;">
+                    <div class="spacedcontent">
+                        <div>Clouds</div>
+                        <div>
+                            <h5 id="clouds">0%</h5>
+                        </div>
+                    </div>
+                    <hr style="height: 2px;">
+                </div>
+                <div class="right" style="width: 45%;">
+                    <div class="spacedcontent">
+                        <div>Humidity</div>
+                        <div>
+                            <h5 id="humidity">0%</h5>
+                        </div>
+                    </div>
+                    <hr style="height: 2px;">
+                    <div class="spacedcontent">
+                        <div>Visibility</div>
+                        <div>
+                            <h5 id="visibility">0kmph</h5>
+                        </div>
+                    </div>
+                    <hr style="height: 2px;">
+                    <div class="spacedcontent">
+                        <div>Wind Speed</div>
+                        <div>
+                            <h5 id="windSpeed">0kmph</h5>
+                        </div>
+                    </div>
+                    <hr style="height: 2px;">
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
