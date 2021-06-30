@@ -46,7 +46,7 @@ async function init(city, unit) {
         document.querySelector("#feelsLike").innerHTML = "Feels Like : " + data.feelsLike + "°c";
         document.querySelector("#tempMin").innerHTML = data.tempMin + "°c";
         document.querySelector("#tempMax").innerHTML = data.tempMax + "°c";
-        document.querySelector("#windSpeed").innerHTML = (data.windSpeed*3.6)+"kmph";
+        document.querySelector("#windSpeed").innerHTML = (data.windSpeed*3.6).toFixed(1)+"kmph";
     } else {
         document.querySelector("#temp").innerHTML = data.temp + "°F";
         document.querySelector("#feelsLike").innerHTML = "Feels Like : " + data.feelsLike + "°F";
@@ -59,7 +59,7 @@ async function init(city, unit) {
     document.querySelector("#disc").style.textTransform = "capitalize";
     document.querySelector("#clouds").innerHTML = data.clouds+"%";
     document.querySelector("#humidity").innerHTML = data.humidity+"%";
-    document.querySelector("#visibility").innerHTML = (data.visibility/1000)+"km";
+    document.querySelector("#visibility").innerHTML = (data.visibility/1000).toFixed(1)+"km";
     
 }
 
