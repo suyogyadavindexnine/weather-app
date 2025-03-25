@@ -1,6 +1,6 @@
 document.querySelector("#time").innerHTML = new Date().toLocaleTimeString([], { timeStyle: 'short' });
 
-let unitselect = document.querySelector("#unitselect");
+let unitSelect = document.querySelector("#unitselect");
 let searchbtn = document.querySelector("#searchbtn");
 let phrase = document.querySelector("#phrase");
 let cityselect = document.querySelector("#cityselect");
@@ -65,16 +65,16 @@ async function init(city, unit) {
 
 init('pune', 'metric');
 
-unitselect.onchange = toggleChanged;
+unitSelect.onchange = toggleChanged;
 cityselect.onchange = toggleChanged;
 
 function toggleChanged() {
-    console.log(unitselect.value);
+    console.log(unitSelect.value);
     console.log(cityselect.value);
 
     if (cityselect.value == '') {
-        init('pune', unitselect.value);
+        init('pune', unitSelect.value);
     } else {
-        init(cityselect.value, unitselect.value);
+        init(cityselect.value, unitSelect.value);
     }
 }
